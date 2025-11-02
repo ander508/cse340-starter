@@ -4,10 +4,7 @@
   --nav-bg: rgb(0, 0, 0);
   --card-bg: rgb(75, 173, 238);
   --own-today-bg: rgba(255, 255, 255, 0.8);
-  --text-2: #3A506B;
-  --accent: #0076C5;
-  --accent-2: #008476;
-  --on-accent: #FFFFFF;
+  --own-today-text: rgb(0, 122, 204);
 }
 
 
@@ -74,7 +71,7 @@ nav ul{
   position: absolute;
   /* border: 1px solid; */
   top: 70px;
-  color: rgb(0, 122, 204);
+  color: var(--own-today-text);
 }
 .own-today h2{
   margin-bottom: 0;
@@ -150,7 +147,7 @@ h2{
 .upgrade-img{
   padding: 30px;
   width: 100%;
-  padding: 20px;
+  /* padding: 20px; */
   height: 100px;
   /* border: 1px solid red; */
   background-color: var(--card-bg);
@@ -159,11 +156,10 @@ h2{
   justify-content:space-around ;
 }
 
-.fig{
+/* .fig{
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
-}
+} */
 .figcaption{
   text-align: center;
 }
