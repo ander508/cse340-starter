@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --nav-bg: rgb(0, 0, 0);
+  --card-bg: rgb(75, 173, 238);
+  --own-today-bg: rgba(255, 255, 255, 0.8);
+  --text-2: #3A506B;
+  --accent: #0076C5;
+  --accent-2: #008476;
+  --on-accent: #FFFFFF;
+}
+
+
 /******* Change Box Model ***************/
 *,
 *:before,
@@ -20,7 +33,7 @@ nav{
   width: 100%;
   border: 1px solid;
   /* padding:5px 20px; */
-  background-color: black;
+  background-color: var(--nav-bg);
   /* padding-top: 5px; */
   padding: 0;
   height: 40px;
@@ -57,7 +70,7 @@ nav ul{
   height: auto;
 }
 .own-today{
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--own-today-bg);
   position: absolute;
   /* border: 1px solid; */
   top: 70px;
@@ -65,6 +78,14 @@ nav ul{
 }
 .own-today h2{
   margin-bottom: 0;
+ 
+}
+span a{
+  font-family: "Arimo", sans-serif;
+  font-weight: 900;
+}
+h2{
+   font-family: "Roboto", sans-serif;
 }
 .own-today ul{
   /* border: 1px solid; */
@@ -79,7 +100,7 @@ nav ul{
 .own-today a{
   display: block;
   height: 40px;
-  background-color: rgb(75, 173, 238);
+  background-color: var(--card-bg);
   width: 70%;
   color: black;
   font-size: 20px;
@@ -132,7 +153,7 @@ nav ul{
   padding: 20px;
   height: 100px;
   /* border: 1px solid red; */
-  background-color: rgb(75, 173, 238);
+  background-color: var(--card-bg);
   display: flex;
   flex-direction: row;
   justify-content:space-around ;
@@ -145,4 +166,7 @@ nav ul{
 }
 .figcaption{
   text-align: center;
+}
+footer{
+  margin-top: 50px;
 }
