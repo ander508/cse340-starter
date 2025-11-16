@@ -1,4 +1,12 @@
 @media  (min-width: 768px){
+  /* body{
+    background-image:url("../images/site/checkerboard.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  } */
+ 
  .hero-image{
    width: 90%;
    margin-left: 5%;
