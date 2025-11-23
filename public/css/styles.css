@@ -199,3 +199,49 @@ footer{
   margin-left: 5%;
   text-align: center;
 }
+#vehicle-display .content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 2px 3px 23px rgb(151, 151, 151);
+  /* background-color: red; */
+}
+#vehicle-display div .imagePrice, .vehicleDetail{
+  width: 100%;
+  box-shadow: 2px 3px 23px rgb(151, 151, 151);
+}
+#vehicle-display div .imagePrice img {
+  width: 100%;
+}
+
+#vehicle-display div .vehicleDetail{
+  padding: 20px;
+}
+
+#vehicle-display div .imagePrice, .vehicleDetail ul{
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+#vehicle-display div .vehicleDetail ul li{
+  list-style-type: none;
+}
+#vehicle-display div .vehicleDetail ul li .pric, .miles, .color, .desc{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.desc{
+  display: flex;
+  align-items:first baseline;
+}
+#vehicle-display div .imagePrice, .vehicleDetail{
+  width: 100%;
+}
+
+
