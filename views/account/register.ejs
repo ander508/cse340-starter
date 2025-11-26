@@ -1,0 +1,43 @@
+<% if (title) { %>
+<h1 class="title"><%= title %></h1>
+<%- messages() %>
+<% } else {
+  res.redirect('/')
+} %>
+
+<% if (errors) { %>
+  <ul class="notice">
+ <% errors.array().forEach(error => { %>
+   <li><%= error.msg %></li>
+<%  }) %>
+ </ul>
+<% } %>
+
+
+<p>All fields are required</p>
+<form class="login-form" action="/account/register" method="post">
+  <div class="input">
+    <label for="account_firstname">First name</label>
+    <input type="text" name="account_firstname" id="account_firstname" required>
+  </div>
+   <div class="input">
+    <label for="account_lastname">Last name</label>
+    <input type="text" name="account_lastname" id="account_lastname" required>
+  </div>
+  <div class="input">
+    <label for="account_email">Email address</label>
+    <input type="email" name="account_email" id="account_email" required>
+  </div>
+  <div class="input">
+    <label for="account_password">Password</label>
+    <input type="password" name="account_password" id="account_password" required
+    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
+      <div class="pwordReq">Passwords must be at least 12 
+        characters and contain at least 1 number, 
+        1 capital letter and 1 special character 
+      </div>
+  <span id="pswBtn">Show Password</span>
+
+  <button class="button" type="submit">Register</button>
+
+</form>

@@ -244,4 +244,73 @@ footer{
   width: 100%;
 }
 
+.notice{
+  color: red;
+}
 
+.login-form{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(2, 2, 53, 0.719);
+  padding: 30px;
+  width: 90%;
+  margin: auto;
+}
+label{
+  color: white;
+}
+
+.input{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+.input input{
+  height: 35px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+
+}
+.button{
+  height: 42px;
+  width: 30%;
+  margin: auto;
+  border-radius: 10px;
+  font-weight: 900;
+}
+.sign-up{
+  width: 50%;
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+   margin-top: 10px;
+   color: black;
+}
+.sign-up a{
+  color: black;
+}
+
+.title{
+  text-align: center;
+  width: 100%;
+}
+#pswBtn{
+  background-color: white;
+  padding: 3px;
+  width: 30%;
+  text-align: center;
+  border-radius: 3px;
+}
+input:required:invalid,input:focus:invalid {
+  background-color: rgba(252, 121, 121, 0.301);
+}
+input:required:valid, input:focus:valid{
+  background-color: rgba(0, 128, 0, 0.329);
+}
+.pwordReq{
+  color: white;
+  margin-bottom: 10px;
+}
