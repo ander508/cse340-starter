@@ -5,11 +5,11 @@
   res.redirect('/')
 } %>
 
-<form action="/submit.js" class="login-form">
+<form action="/account/login" class="login-form" method="post">
     <div class="input email">
         <label for="account_email" >
         Username</label>
-        <input type="email" name="account_email" id="account_email" required>
+        <input type="email" name="account_email" id="account_email" required value="<%= locals.account_email %>">
     </div>
     <div class="input password">
         <label for="account_password" >
