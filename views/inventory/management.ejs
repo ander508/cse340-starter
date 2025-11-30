@@ -1,0 +1,19 @@
+<!-- The content Heading -->
+
+<% if (title) { %>
+<h1><%= title %></h1>
+<% } else {
+  res.redirect('/')
+} %>
+
+<!-- Massage block -->
+ <div class="notice">
+      <%- messages() %>
+ </div>
+
+ <div>
+    <a href="/inv/newClassification" title="Click to add a new vehicle classification">add new classification</a>
+ </div>
+ <div>
+    <a href="/inv/newvehicle">add new inventory</a>
+ </div>

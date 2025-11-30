@@ -304,13 +304,28 @@ label{
   text-align: center;
   border-radius: 3px;
 }
-input:required:invalid,input:focus:invalid {
+input:required:invalid,input:focus:invalid, textarea:required:invalid, textarea:focus:invalid {
   background-color: rgba(252, 121, 121, 0.301);
 }
-input:required:valid, input:focus:valid{
+input:required:valid, input:focus:valid, textarea:required:valid, textarea:focus:valid{
   background-color: rgba(0, 128, 0, 0.329);
 }
 .pwordReq{
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  margin-top: -15px;
+
+}
+
+textarea{
+ text-align: center;
+ color: white;
+}
+
+textarea::placeholder, input::placeholder{
+  color: rgba(255, 255, 255, 0.53);
+}
+select{
+  height: 30px;
 }
