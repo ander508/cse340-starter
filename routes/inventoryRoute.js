@@ -60,4 +60,30 @@ router.post(
 )
 
 
+router.get("/getInventory/:classification_id", utilities.handleErrors(invController.getInventoryJSON))
+
+
+//For Inventory Update
+router.get(
+  "/edit/:inv_id",
+  utilities.handleErrors(invController.editInventory))
+
+router.post(
+  "/update/", 
+  invChecks.newInventoryRules(),
+  invChecks.checkUpdateData,
+  utilities.handleErrors(invController.updateView))
+
+router.get(
+  "/delete/:inv_id",
+  utilities.checkLogin,
+  utilities.checkEmployeeOrAdmin,
+  utilities.handleErrors(invController.deleteInventoryView))
+
+router.post(
+  "/delete",
+  utilities.checkLogin,
+  utilities.checkEmployeeOrAdmin,
+  utilities.handleErrors(invController.deleteInventory))
+
 module.exports = router;

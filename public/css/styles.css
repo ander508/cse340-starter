@@ -312,9 +312,9 @@ input:required:valid, input:focus:valid, textarea:required:valid, textarea:focus
 }
 .pwordReq{
   color: white;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-align: center;
-  margin-top: -15px;
+  /* margin-top: -15px; */
 
 }
 
@@ -328,4 +328,31 @@ textarea::placeholder, input::placeholder{
 }
 select{
   height: 30px;
+}
+
+table{
+  width: 96%;
+  border-collapse: collapse;
+}
+tbody tr:nth-last-of-type(odd){
+  background-color: aliceblue;
+}
+
+tbody tr{
+  border-top: 2px solid rgba(0, 0, 0, 0.445);
+  height: 50px;
+}
+thead tr{
+  text-align: left;
+}
+
+.input input.delete{
+  color: black;
+}
+
+.psword{
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
 }

@@ -19,11 +19,50 @@ router.post(
   "/login",
   regValidate.loginRules(),
   regValidate.checkLoginData,
- (req, res) => {
-    res.status(200).send('login process')
-  }
-  
+  utilities.handleErrors(accountController.accountLogin)
+  )
+
+  router.get(
+    "/",
+    utilities.checkLogin,  
+    utilities.handleErrors(accountController.SignedIn))
+
+
+    /* ****************************************
+5-6
+ **************************************** */
+router.get(
+  "/logout",
+  utilities.handleErrors(accountController.accountLogout)
 )
 
+/* ****************************************
+ *5 /5
+ **************************************** */
+router.get(
+  "/update/:id",
+  utilities.checkLogin,
+  utilities.handleErrors(accountController.buildUpdate)
+)
+
+
+/* ****************************************
+ *5 -5
+ **************************************** */
+router.post(
+  "/update",
+  utilities.checkLogin,
+  regValidate.updateRules(),
+  regValidate.checkEditData,
+  utilities.handleErrors(accountController.processUpdate)
+)
+
+router.post(
+  "/password",
+  utilities.checkLogin,
+  regValidate.passwordRule(),
+  regValidate.checkPassword,
+  utilities.handleErrors(accountController.processPassword)
+)
 
 module.exports = router;

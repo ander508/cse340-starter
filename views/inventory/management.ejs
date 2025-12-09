@@ -17,3 +17,15 @@
  <div>
     <a href="/inv/newvehicle">add new inventory</a>
  </div>
+ <h2>Manage Inventory</h2>
+ <p>Select Classification from the list to member items</p>
+ 
+ <div class="input select">
+   <label for="classificationList">Classification</label>
+   <%- classificationSelect %>
+</div>
+
+ <table id="inventoryDisplay"></table>
+ <noscript>JavaScript must be enabled to use this page.</noscript>
+ 
+ <script src="../../js/inventory.js"></script>
