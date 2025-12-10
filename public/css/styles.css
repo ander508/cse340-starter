@@ -356,3 +356,39 @@ thead tr{
   text-align: center;
   margin-top: 30px;
 }
+
+
+
+.vehicle-list ul{
+  display: flex;
+}
+.list{
+  display: flex;
+  align-items: center;
+  border-bottom:1px solid rgba(0, 0, 0, 0.356);
+  height: 40px;
+  margin-bottom: 2px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  box-sizing: border-box;
+}
+.list:nth-child(odd){
+  background-color: rgba(128, 128, 128, 0.603);
+}
+.list:first-child{
+    border-top:1px solid rgba(0, 0, 0, 0.356);
+}
+.list strong{
+  width: 60%;
+}
+
+.list form{
+  width: 40%;
+}
+.fav-form button{
+  width: 50%;
+  margin-left: 25%;
+  background-color: rgba(128, 128, 128, 0.274);
+  height: 30px;
+  border: 1px solid rgba(128, 128, 128, 0.733);
+}

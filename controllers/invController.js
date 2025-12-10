@@ -37,6 +37,7 @@ invCont.buildDetail = async function (req, res, next) {
     nav,
     message: null,
     htmlData,
+    inv_id: vehicle.inv_id
   })
 }
 

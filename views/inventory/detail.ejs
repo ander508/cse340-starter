@@ -16,3 +16,8 @@
 <%} else { %>
 <p class="notice">Sorry, no matching vehicle could be found.</p>
   <%} %>
+
+  <form action="/fav/add" method="POST" class="login-form">
+  <input class="" type="hidden" name="inv_id" value="<%= inv_id %>">
+  <button class="button" type="submit" class="favorite-btn">Add to Favorites</button>
+</form>

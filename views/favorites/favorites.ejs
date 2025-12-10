@@ -1,0 +1,38 @@
+<% if (title) { %>
+<h1><%= title %></h1>
+<% } else { res.redirect('/') } %>
+
+<%- messages() %>
+
+
+<% if (favorites.length === 0) { %>
+  <p>You have no favorite vehicles yet.</p>
+<% } else { %>
+  <ul class="vehicle-list">
+  <% favorites.forEach(item => { %>
+    <li class="list">
+      <strong><%= item.inv_year %> <%= item.inv_make %> <%= item.inv_model %></strong>
+
+      <form class="fav-form" action="fav/remove" method="POST" style="display:inline;">
+        <div class="fav">
+          <input type="hidden" name="inv_id" value="<%= item.inv_id %>">
+          <button class="button" type="submit">Remove</button>
+
+        </div>
+      </form>
+    </li>
+  <% }) %>
+  </ul>
+<% } %>
+
+<p><a href="/" titlehicle="Click to add Fav Ve">Home</a></p>
+
+
+
+
+
+
+
+
+
+
