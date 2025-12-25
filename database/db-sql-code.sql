@@ -47,6 +47,18 @@ CREATE TABLE IF NOT EXISTS public.account
 	CONSTRAINT account_pkey PRIMARY KEY (account_id)
 );
 
+-- Creates Favorites table.
+CREATE TABLE favorites (
+  favorite_id SERIAL PRIMARY KEY,
+  account_id INT NOT NULL,
+  inv_id INT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE (account_id, inv_id),
+  FOREIGN KEY (account_id) REFERENCES account(account_id) ON DELETE CASCADE,
+  FOREIGN KEY (inv_id) REFERENCES inventory(inv_id) ON DELETE CASCADE
+);
+
+
 -- Data for table 'classification'
 INSERT INTO public.classification 
 (classification_name)
